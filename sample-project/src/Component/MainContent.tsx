@@ -1,8 +1,7 @@
+import ListGroup from "./ListGroup";
+
 function MainContent() {
-    const name = 'Raj';
-    return (
-        <p>Hello {name ? name : ''}</p>
-    );
+  return <ListGroup></ListGroup>;
 }
 
 export default MainContent;

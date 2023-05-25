@@ -1,10 +1,18 @@
-import Message from "./Component/Message"
+import Header from "./Component/Header";
+import Footer from "./Component/Footer";
+import Menu from "./Component/Menu";
+import MainContent from "./Component/MainContent";
 
 function App() {
 
   return (
     <div>
-      <Message></Message>
+      <Header />
+      <span>
+        <Menu />
+        <MainContent />
+      </span>
+      <Footer />
     </div>
   );
 }

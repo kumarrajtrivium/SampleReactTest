@@ -2,12 +2,14 @@ import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import MainContent from "./Component/MainContent";
 import Menu from "./Component/Menu";
-import FacColor from "./Component/FavColor";
+import FavColor from "./Component/FavColor";
+import Message from "./Component/Message";
 
 function App() {
   return (
     <div>
-      <FacColor></FacColor>
+      <FavColor></FavColor>
+      <Message text="i am dynamic mesage"></Message>
       <Header />
       <span>
         <Menu />

@@ -1,10 +1,9 @@
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
-import Menu from "./Component/Menu";
 import MainContent from "./Component/MainContent";
+import Menu from "./Component/Menu";
 
 function App() {
-
   return (
     <div>
       <Header />

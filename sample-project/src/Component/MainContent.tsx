@@ -12,7 +12,6 @@ function MainContent() {
   ];
   return (
     <>
-      <Card></Card>
       <ListGroup Heading="Dynamic List from consumer" City={city}></ListGroup>
     </>
   );

@@ -7,9 +7,14 @@ import Message from "./Component/Message";
 import Alert from "./Component/Alert";
 import Button from "./Component/Button";
 import { useState } from "react";
+import OnSelectClick from "./Component/OnSelectClick";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
+  let items = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
   return (
     <div>
       {/* <Button></Button> */}
@@ -19,6 +24,11 @@ function App() {
           <b>comming from app function</b>
         </p>
       </Alert> */}
+      <OnSelectClick
+        heading="Hello My Head"
+        items={items}
+        onSelectItem={handleSelectItem}
+      ></OnSelectClick>
       <>
         <Button color="success" onClick={() => setAlertVisibility(true)}>
           My button

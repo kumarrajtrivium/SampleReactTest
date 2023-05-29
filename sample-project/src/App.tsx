@@ -8,6 +8,14 @@ import Alert from "./Component/Alert";
 import Button from "./Component/Button";
 import { useState } from "react";
 import OnSelectClick from "./Component/OnSelectClick";
+import AfterLogin from "./Component/AfterLogin";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./Component/Login";
+import DashBoard from "./Component/DashBoard";
+import Alert1 from "./Component/Alert1";
+import Employee from "./Component/Employee";
+import Details from "./Component/Details";
+import Users from "./Component/Users";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -17,6 +25,18 @@ function App() {
   };
   return (
     <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Login />} />
+          <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="alert" element={<Alert1 children={""} />} />
+          <Route path="emp" element={<Employee />} />
+          <Route path="details/:id" element={<Details />} />
+          <Route path="user" element={<Users />} />
+        </Routes>
+      </BrowserRouter>
+      <AfterLogin></AfterLogin>
       {/* <Button></Button> */}
       {/* <Alert message="comming from app"></Alert> */}
       {/* <Alert>

@@ -16,6 +16,8 @@ import Alert1 from "./Component/Alert1";
 import Employee from "./Component/Employee";
 import Details from "./Component/Details";
 import Users from "./Component/Users";
+import Sample from "./Sample/Sample";
+import DropDownList from "./Sample/DropDownList";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -25,6 +27,8 @@ function App() {
   };
   return (
     <div>
+      <DropDownList></DropDownList>
+      <Sample></Sample>
       <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />

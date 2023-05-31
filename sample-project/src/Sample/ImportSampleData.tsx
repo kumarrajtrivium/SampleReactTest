@@ -1,26 +1,7 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-interface sampleData {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-}
+import useUser from "./Hook/useUser";
+
 const ImportSampleData = () => {
-  const [users, setUsers] = useState<sampleData[]>([]);
-  const [error, setError] = useState("");
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      //success of api call
-      .then((res) => {
-        setUsers(res.data);
-      })
-      //if any error or failed the API call to the server
-      .catch((err) => {
-        setError(err.message);
-      });
-  }, []);
+  const { users, error, isLoading } = useUser();
   return (
     <div>
       {error ? (

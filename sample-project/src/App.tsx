@@ -19,6 +19,7 @@ import Users from "./Component/Users";
 import Sample from "./Sample/Sample";
 import DropDownList from "./Sample/DropDownList";
 import ImportSampleData from "./Sample/ImportSampleData";
+import UserApiCall from "./ApiCall/UserApiCall";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -28,6 +29,7 @@ function App() {
   };
   return (
     <div>
+      <UserApiCall></UserApiCall>
       <ImportSampleData></ImportSampleData>
 
       <DropDownList></DropDownList>
